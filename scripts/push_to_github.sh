@@ -3,7 +3,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
-REMOTE="${1:-git@github.com:Athaca/protocol-intelligence-databricks.git}"
+REMOTE="${1:-git@github.com:Saif-at-Athaca/Athaca-protocol-intelligence-databricks.git}"
 if git remote get-url origin >/dev/null 2>&1; then
   git remote set-url origin "$REMOTE"
 else

@@ -23,6 +23,11 @@ workspace:
 include:
   - resources/*.yml
 
+sync:
+  paths:
+    - notebooks
+    - docs
+
 targets:
   dev:
     mode: development

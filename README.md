@@ -58,13 +58,8 @@ See [docs/branch-policy.md](docs/branch-policy.md).
 
 Use the main PI app for reference semantics (Design Landscape denominators, Scenario Analysis, RWD). This repo implements the **Databricks** path only.
 
-## Publish to GitHub (Athaca)
+## Repository
 
-This clone is ready on disk at `protocol-intelligence-databricks`. Remote is preset to:
+**GitHub:** [Saif-at-Athaca/Athaca-protocol-intelligence-databricks](https://github.com/Saif-at-Athaca/Athaca-protocol-intelligence-databricks)
 
-`git@github.com:Athaca/protocol-intelligence-databricks.git`
-
-1. Create an **empty** repository with that name under the Athaca org (no README).
-2. Run `./scripts/push_to_github.sh` from this directory.
-
-Alternatively, after `origin auth login` or `gh auth login`, use Cursor Origin or `gh repo create`.
+Link this repo as the Databricks workspace Git folder (J02) and set `DATABRICKS_HOST` for bundle deploy targets.

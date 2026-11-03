@@ -8,7 +8,7 @@ resources:
       tasks:
         - task_key: placeholder
           notebook_task:
-            notebook_path: ../notebooks/bronze/aact_load_placeholder.py
+            notebook_path: ./notebooks/bronze/aact_load_placeholder
             base_parameters:
               snapshot_manifest: docs/data/aact-snapshot.md
       tags:
