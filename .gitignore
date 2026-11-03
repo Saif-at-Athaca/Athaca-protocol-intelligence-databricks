@@ -15,7 +15,8 @@ __pycache__/
 .vscode/
 
 # AACT dumps (S02) — keep manifest in docs/, not raw data
-data/aact/
+data/aact/*
+!data/aact/.gitkeep
 *.zip
 *.dump
 *.sql.gz
