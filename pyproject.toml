@@ -1,0 +1,18 @@
+[project]
+name = "protocol-intelligence-databricks"
+version = "0.1.0"
+description = "Databricks integration for ATHACA Protocol Intelligence POC"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["scripts", "tests"]
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,16 @@
+# Placeholder job — AACT bronze load wired in S03
+
+resources:
+  jobs:
+    aact_bronze_load:
+      name: "[PI POC] AACT bronze load (S03)"
+      description: Load gitignored local snapshot into pi.bronze — implement in S03.
+      tasks:
+        - task_key: placeholder
+          notebook_task:
+            notebook_path: ../notebooks/bronze/aact_load_placeholder.py
+            base_parameters:
+              snapshot_manifest: docs/data/aact-snapshot.md
+      tags:
+        workbook: S03
+        owner: saif

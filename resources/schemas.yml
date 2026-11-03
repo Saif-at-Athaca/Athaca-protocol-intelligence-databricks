@@ -1,0 +1,24 @@
+# Unity Catalog schema placeholders — materialized after J07 grants are confirmed.
+# S03 bronze load targets ${var.catalog}.${var.bronze_schema}.
+
+resources:
+  schemas:
+    pi_bronze:
+      name: ${var.bronze_schema}
+      catalog_name: ${var.catalog}
+      comment: Raw AACT and other ingest (S03)
+
+    pi_silver:
+      name: ${var.silver_schema}
+      catalog_name: ${var.catalog}
+      comment: Trial model (A06)
+
+    pi_public:
+      name: ${var.public_schema}
+      catalog_name: ${var.catalog}
+      comment: Gold comparison-ready tables (A07)
+
+    pi_outputs:
+      name: ${var.outputs_schema}
+      catalog_name: ${var.catalog}
+      comment: Workflow and extraction outputs (A05, A10)

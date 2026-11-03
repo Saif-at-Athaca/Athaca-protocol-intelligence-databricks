@@ -1,0 +1,10 @@
+# Protocol PDF storage (S04 — VITAL)
+
+resources:
+  volumes:
+    protocols:
+      name: protocols
+      catalog_name: ${var.catalog}
+      schema_name: ${var.outputs_schema}
+      volume_type: MANAGED
+      comment: Unity Catalog Volume for protocol PDFs (S04)
