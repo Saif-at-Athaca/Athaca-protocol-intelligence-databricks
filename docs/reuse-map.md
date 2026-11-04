@@ -36,10 +36,11 @@ Source: `Athaca/Protocol-Intelligence-New-UI`, branch `release/v1-saved-runs-dep
 
 ## New builds: nothing to reuse
 
-The Developer Brief scopes in pieces the existing code has no equivalent for. They are built new:
+Needed for the POC, with no equivalent in the existing code:
 
-- **Decision record and change impact:** recording a decision against the evidence rows it used, and flagging it when a new AACT snapshot changes one of them. Target: `pi.outputs.decisions`, `decision_evidence` and `evidence_change_flags`, linked to evidence through `trial_field.field_id`.
-- **Per-field provenance and reviewer status** (A02, for AC2); the existing code labels provenance per record, module or UI section. Designed in A02 (`docs/trial-model-schema.md`, separate PR): one row per field value with version history, reviews in their own table.
+- **Per-field provenance and reviewer status** (A02, for AC2); the existing code labels provenance per record, module or UI section. Designed in A02 (`docs/trial-model-schema.md`, separate PR).
+
+**Out of scope for the POC (POC Proposal word doc)**, though the Developer Brief includes them: the MCP server for Claude Desktop, the decision record and change flagging, and evaluation sets. Nothing in the existing code covers them either.
 
 ## Port plan
 
