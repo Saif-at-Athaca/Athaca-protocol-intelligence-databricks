@@ -1,0 +1,11 @@
+field_path,element_key,expected_value,value_status,pdf_pages,section,quote,note
+design.enrollment,,260,reported,15|43,3.3 Number of Sites and Subjects,Up to 260 subjects will be enrolled in the study,"Planned maximum. Not 236 (sample-size calculation, p24) and not 130 (per arm). Registry: 260 ACTUAL"
+design.masking,,DOUBLE,reported,12|42,3.1 Study Design,"randomized, double-blind, placebo-controlled","Protocol says double-blind; the registry says QUADRUPLE (counts masked roles), so a mismatch with AACT is expected"
+design.is_blinded,,true,reported,12|42,3.1 Study Design,"randomized, double-blind, placebo-controlled",
+endpoint.type,PRIMARY:1,PRIMARY,reported,20|43,3.4.1.1 Primary Efficacy Endpoints,Time to all-cause mortality or cardiac hospitalization as adjudicated by the CEC,"Exactly one primary endpoint, although the heading is plural"
+endpoint.measure,PRIMARY:1,Time to all-cause mortality or cardiac hospitalization as adjudicated by the CEC,reported,20|43,3.4.1.1 Primary Efficacy Endpoints,Time to all-cause mortality or cardiac hospitalization as adjudicated by the CEC,Verbatim wording
+endpoint.is_composite,PRIMARY:1,true,reported,20|43,3.4.1.1 Primary Efficacy Endpoints,all-cause mortality or cardiac hospitalization,"R4: one endpoint with two parts, never two endpoints. The protocol never uses the word ""composite"""
+endpoint.component,PRIMARY:1:C1,all-cause mortality,reported,20|43,3.4.1.1 Primary Efficacy Endpoints,all-cause mortality,
+endpoint.component,PRIMARY:1:C2,cardiac hospitalization,reported,20|43,3.4.1.1 Primary Efficacy Endpoints,cardiac hospitalization,
+population.min_age_years,,18,reported,15|48,4.1 Inclusion Criteria,Aged ≥ 18 years,
+population.max_age_years,,,not_applicable,,4.1 Inclusion Criteria,,"No upper age limit. The exclusion about subjects over 75 with monoclonal gammopathy is not an age limit"

@@ -1,0 +1,4 @@
+# Model calls for the extraction scripts (not needed for CI tests)
+-r requirements-dev.txt
+databricks-langchain>=0.22
+databricks-sdk>=0.60
