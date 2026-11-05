@@ -60,6 +60,6 @@ Use the main PI app for reference semantics (Design Landscape denominators, Scen
 
 ## Repository
 
-**GitHub:** [Saif-at-Athaca/Athaca-protocol-intelligence-databricks](https://github.com/Saif-at-Athaca/Athaca-protocol-intelligence-databricks)
+**GitHub:** [Athaca/PI-Databricks](https://github.com/Athaca/PI-Databricks)
 
 Link this repo as the Databricks workspace Git folder (J02) and set `DATABRICKS_HOST` for bundle deploy targets.

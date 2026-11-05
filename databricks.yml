@@ -1,5 +1,6 @@
 # Databricks Asset Bundle — Protocol Intelligence POC
-# Validate locally: databricks bundle validate
+# Host comes from DATABRICKS_HOST (do not set workspace.host in targets).
+# Validate: databricks bundle validate -t dev
 
 bundle:
   name: protocol-intelligence-databricks
@@ -16,9 +17,8 @@ variables:
     default: public
   outputs_schema:
     default: outputs
-
-workspace:
-  root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+  restricted_schema:
+    default: restricted_test
 
 include:
   - resources/*.yml
@@ -33,9 +33,11 @@ targets:
     mode: development
     default: true
     workspace:
-      host: ${env.DATABRICKS_HOST}
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
 
   prod:
     mode: production
     workspace:
-      host: ${env.DATABRICKS_HOST}
+      root_path: /Shared/pi-poc/.bundle/${bundle.name}/${bundle.target}
+    run_as:
+      service_principal_name: pi-poc-deployer

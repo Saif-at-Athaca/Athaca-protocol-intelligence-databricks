@@ -1,4 +1,5 @@
-# Unity Catalog schema placeholders — materialized after J07 grants are confirmed.
+# Unity Catalog schemas. silver/public/outputs/restricted_test + protocols volume
+# already exist (pi-poc-engineers). Bind before first prod deploy — see docs/deploy-bind.md.
 # S03 bronze load targets ${var.catalog}.${var.bronze_schema}.
 
 resources:
@@ -22,3 +23,8 @@ resources:
       name: ${var.outputs_schema}
       catalog_name: ${var.catalog}
       comment: Workflow and extraction outputs (A05, A10)
+
+    pi_restricted_test:
+      name: ${var.restricted_schema}
+      catalog_name: ${var.catalog}
+      comment: Restricted schema for AC6 access tests

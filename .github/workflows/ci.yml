@@ -35,7 +35,9 @@ jobs:
           curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sh
           echo "$HOME/.databricks/bin" >> "$GITHUB_PATH"
 
-      - name: Validate bundle
+      - name: Validate bundle (prod target, SP auth)
         env:
-          DATABRICKS_HOST: https://placeholder.cloud.databricks.com
-        run: databricks bundle validate
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_CLIENT_ID: ${{ secrets.DATABRICKS_CLIENT_ID }}
+          DATABRICKS_CLIENT_SECRET: ${{ secrets.DATABRICKS_CLIENT_SECRET }}
+        run: databricks bundle validate -t prod
